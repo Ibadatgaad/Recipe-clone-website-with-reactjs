@@ -1,0 +1,531 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: antiquewhite;
+}
+
+.main_div {
+    max-width: 1300px;
+    margin: auto;
+    padding: 0px 16px;
+}
+
+/* ── Navbar / Header ── */
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    padding: 17px 24px;
+    height: 70px;
+    background-color: antiquewhite;
+    border: 1px solid #282727dd;
+    margin-top: 10px;
+    border-radius: 32px;
+
+}
+.menu_link{
+    display: none;
+}
+
+/* Logo */
+.logo {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo img {
+    height: 60px;       /* main logo height — tweak to taste */
+    width: auto;        /* keeps aspect ratio */
+    object-fit: contain;
+}
+
+/* Nav links — margin-left: auto pushes everything after logo to the right */
+.nav_links {
+    margin-left: auto;
+    
+}
+
+.nav_links nav ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    
+}
+
+.nav_links nav ul li a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.nav_links nav ul li a:hover {
+    color: #e05c2a;
+}
+
+/* Search icon */
+.search {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.search img {
+    height: 28px;       /* icon size */
+    width: 28px;
+    object-fit: contain;
+}
+
+/* Subscribe button */
+.button_section button {
+    flex-shrink: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #fff;
+    background-color: #131312;
+    border: none;
+    border-radius: 32px;
+    padding: 10px 20px;
+    cursor: pointer;
+    
+   
+}
+
+/* ── Hero Section ── */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 560px;
+    margin-top: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+
+    /* 👇 PASTE YOUR BACKGROUND IMAGE URL HERE */
+    background-image: url(https://images.pexels.com/photos/4252152/pexels-photo-4252152.jpeg);
+    background-size: cover;
+    background-position: center;
+}
+
+.hero_overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(120, 40, 10, 0.55); /* dark reddish tint like in the design */
+    border-radius: 20px;
+}
+
+.hero_content {
+    position: relative;
+    z-index: 1;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 40px 24px;
+}
+
+.hero_title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 72px;
+    font-weight: 900;
+    color: #f5d9cc;
+    line-height: 1.05;
+    letter-spacing: -1px;
+    margin-bottom: 20px;
+}
+
+.hero_subtitle {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #f5d9cc;
+    line-height: 1.7;
+    max-width: 520px;
+    margin-bottom: 32px;
+}
+
+.hero_btn {
+    background-color: #e05c2a;
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 14px 32px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.hero_btn:hover {
+    background-color: #c44e21;
+}
+
+/*--our pallete--*/
+.our_palette_section{
+    margin-top: 60px;
+    background: #C4E5FC;
+    border-radius: 30px;
+    padding: 40px;
+}
+.our_palette_section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+
+}
+.our_palette_section .right_bar .our_menu_slide{
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 3px;
+    border-bottom: 1px solid #26252230;
+}
+.our_palette_section .right_bar .our_menu_slide:last-child{
+    border-bottom: none;
+}
+
+.our_palette_section .right_bar .our_menu_slide img{
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+.our_palette_section .right_bar .our_menu_slide h2{
+    font-family: "Montserrat",sans-serif !important;
+    font-size: 18px;
+    font-weight: 400;
+    color: #262522;
+    text-transform: uppercase;
+}
+
+.our_palette_section .left_bar{
+    align-self: flex-end;
+
+}
+
+.our_palette_section .left_bar .our_platte_text button{
+background-color: #F05A3A;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 6px 16px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-bottom: 12px;
+    display: inline-block;
+}
+.our_palette_section .left_bar .our_platte_text button:hover{
+    background-color: #c44e21;
+
+
+}
+.our_palette_section .left_bar .our_platte_text h2{
+    font-family: "Montserrat" sans-serif !important;
+    font-size: 40px;
+    font-weight: 800;
+    color:#262522 ;
+    margin: 2px 0;
+    text-transform: uppercase;
+}
+
+.our_palette_section .left_bar .our_platte_text p{
+    font-family: "Roboto", sans-serif !important ;
+    font-size: 16px;
+    font-weight: 300;
+    color: #262522CC;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+.our_palette_section .left_bar .our_platte_text .our_palatte_button .see_more_btn{
+    background-color: transparent;
+    color: #2C1810;
+    border: 2px solid #2C1810;
+    border-radius: 50px;
+    padding: 12px 28px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.our_palette_section .left_bar .our_platte_text .our_palatte_button .see_more_btn:hover{
+    background-color: #2C1810;
+    color: #fff;
+}
+
+.cta_section{
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(./assets/images/Cta_bg.jpg) no-repeat center center / cover;
+    border-radius: 30px;
+    margin: 40px 0px;
+}
+.cta_section .cta_inner{
+    text-align: center;
+    max-width: 900px;
+}
+.cta_section .cta_inner span{
+    font-family: "Roboto", sans-serif !important;
+    font-size: 14px;
+    font-weight: 500;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+.cta_section .cta_inner h2{
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 70px;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.cta_section .cta_inner p{
+    font-family: "Roboto" , sans-serif !important;
+    font-size: 16px;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: auto;
+
+}
+.cta_section .cta_inner .input_btn {
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    border-radius: 50px;
+    padding: 6px 6px 6px 20px;
+    max-width: 480px;
+    margin: 30px auto 0 auto;
+}
+
+.cta_section .cta_inner .input_btn input {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: #333;
+}
+
+.cta_section .cta_inner .input_btn input::placeholder {
+    color: #aaa;
+}
+
+.cta_section .cta_inner .input_btn button {
+    flex-shrink: 0;
+    background-color: #131312;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 24px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cta_section .cta_inner .input_btn button:hover {
+    background-color: #333;
+}
+footer {
+    max-width: 1300px;
+    margin: 20px auto;
+    background: #262522;
+    padding: 30px 40px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer_logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer_logo img {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.footer_logo span {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    line-height: 1.4;
+}
+
+footer nav ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+}
+
+footer nav ul li a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    transition: color 0.2s;
+}
+
+footer nav ul li a:hover {
+    color: #e05c2a;
+}
+
+.footer_socials {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.footer_socials a img {
+    height: 22px;
+    width: 22px;
+    object-fit: contain;
+    filter: brightness(0) invert(1);
+    transition: opacity 0.2s;
+}
+
+.footer_socials a:hover img {
+    opacity: 0.7;
+}
+
+.our_featured{
+    border: 1px solid #2625223D;
+    border-radius: 30px;
+    margin: 60px 0px;
+    padding: 20px;
+    
+}
+
+.our_featured h2{
+    font-family: "Montserrat", sans-serif !important;
+    font-size: 40px;
+    font-weight: 800;
+    color: #262522;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+
+}
+.feaured_grid{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+
+.recipe_card{
+     border: 1px solid #2625223D;
+     border-radius: 20px;
+     overflow: hidden;
+}
+.recipe_card .img{
+    width: 100%;
+    height: 200px;
+    position: relative;
+   
+}
+
+.recipe_card .img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: 0.3s;
+}
+
+.recipe_card .img .veg_recipe{
+    position: absolute;
+    bottom: -10px;
+    right: 10px;
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+    transition: 0.3s;
+}
+.recipe_card .content_section{
+    padding: 20px;
+    background-color: #FFFBF2;
+
+}
+
+.content_section h2{
+    font-family: "Monserrat" , sans-serif !important;
+    font-size: 20px;
+    font-weight: 700;
+    color: #262522;
+    margin-bottom: 10px;
+}
+
+.content_section p{
+    font-family: "Roboto", sans-serif !important;
+    font-size: 16px;
+    font-weight: 400;
+    color: #262522CC;
+    margin-bottom: 15px;
+    line-height: 1.6;
+}
+.content_section .footer_section{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.content_section .footer_section .time{
+    font-family: "Roboto" , sans-serif !important;
+    font-size: 16px;
+    font-weight: 600;
+    color: #262522;
+}
+
+.content_section .footer_section .view_recipe_button{
+    background-color: transparent;
+    border: 1px solid black;
+    padding: 8px 16px;
+    border-radius: 32px;
+    color: #000000;
+    font-family: "Roboto" , sans-serif !important;
+    font-size: 12px;
+    font-weight: 500 ;
+    cursor: pointer;
+    transition: 0.3s;
+    text-transform: capitalize;
+}
